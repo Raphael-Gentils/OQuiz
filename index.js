@@ -4,10 +4,7 @@ const express = require('express');
 const app = express();
 const router = require('./app/routers/router');
 
-const {
-	notFound,
-	errorHandler,
-} = require('./app/controllers/middlewares/errorHandlers');
+const { notFound, errorHandler } = require('./app/controllers/middlewares/errorHandlers');
 
 const port = process.env.PORT || 3000;
 
