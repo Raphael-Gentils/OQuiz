@@ -14,7 +14,7 @@ const homeController = {
 
             levelfour = await Level.findAll({ where: { id: 4 } });
 
-            console.log(levelfour);
+            // console.log(levelfour);
             // // * Controle surprise : 2 minutes pour trouver comment mettre à jour le level avec l'ID 4
             // level.name = 'Mickey';
             // await level.save();

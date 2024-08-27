@@ -9,7 +9,7 @@ const quiz = new Quiz({
     updated_at: 'now',
 });
 
-console.log(quiz);
+// console.log(quiz);
 
 // const user = new User({
 //     firstname: 'Lorenzo',

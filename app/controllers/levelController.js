@@ -1,8 +1,8 @@
-const Level = require('../models/Level');
+const {Level} = require('../models/Level');
 
 const levelController = {
     async index(req, res) {
-        const levels = await Level.findAll();
+        const levels = await Level.findAll({});
 
         res.render('levels', { levels: levels });
     },

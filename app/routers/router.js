@@ -1,12 +1,15 @@
 const router = require('express').Router();
 const { levelRouter } = require('./levelRouter.js');
 const { installRouter } = require('./installRouter.js');
+const { quizRouter } = require('./quizRouter.js');
+
 // const router = express.Router();
 // const { Router } = require('express');
 // const router = Router();
 
 const { homeController } = require('../controllers/homeController.js');
 
+router.use(quizRouter);
 router.get('/', homeController.index);
 
 router.use(levelRouter);
