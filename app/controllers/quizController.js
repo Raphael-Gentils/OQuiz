@@ -4,6 +4,7 @@ const quizController = {
     async index(req, res) {
         const quizzes = await Quiz.findAll({
             include: ['author', 'tags'],
+            order: [['title', 'ASC'],],
         });
         res.render('index', { quizzes: quizzes });
     },

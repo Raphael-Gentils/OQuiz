@@ -4,6 +4,8 @@ const { installRouter } = require('./installRouter.js');
 const { quizRouter } = require('./quizRouter.js');
 const { tagRouter } = require('./tagRouter.js');
 
+const { catchErrors } = require('../controllers/middlewares/errorHandlers.js');
+
 // const router = express.Router();
 // const { Router } = require('express');
 // const router = Router();
@@ -11,7 +13,7 @@ const { tagRouter } = require('./tagRouter.js');
 const { homeController } = require('../controllers/homeController.js');
 
 router.use(quizRouter);
-router.get('/', homeController.index);
+router.get('/', catchErrors(homeController.index));
 
 
 router.use(tagRouter);
