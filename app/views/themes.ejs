@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+
+<main class="container py-4">
+
+    <h1>Thèmes</h1>
+  
+    <div>
+      <% for( let index = 0; index < tags.length; index++ ) { %>
+      
+        <span class="badge bg-primary p-2 mb-1"><%= tags[index].name %></span>
+
+        <% const quizzes = tags[index].quizzes %>
+        <% if (quizzes?.length) { %>
+         
+          <ul>
+            <% for( let index = 0; index < quizzes.length; index++ ) { %>
+              
+              <li><a href="/quiz/<%= quizzes[index].id %>"><%= quizzes[index].title %></a></li>
+              
+            <% } %>
+          </ul>
+            
+        <% } else { %>
+         
+          <p class="ms-2">Aucun quizz dans cette catégorie pour le moment....</p>
+
+        <% } %>
+      <% } %>
+
+    
+    </div>
+  
+  </main>
+  
+  <%- include('partials/foot') %>
