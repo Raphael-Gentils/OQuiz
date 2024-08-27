@@ -29,8 +29,8 @@ const homeController = {
 
             // * await Level.create({ name: 'quindim' });
             // * 2 minutes pour trouver un autre moyen de créer un objet level
-            const newlevel = Level.build({ name: 'Quindim the beasts' });
-            await newlevel.save();
+            // const newlevel = Level.build({ name: 'Quindim the beasts' });
+            // await newlevel.save();
 
             res.render('index');
         } catch (error) {

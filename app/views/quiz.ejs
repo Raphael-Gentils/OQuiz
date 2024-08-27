@@ -7,8 +7,14 @@
     <h2 class="text-center m-2"> <%= quiz.description %> </h1>
   
     <h2 class="small text-end">Par <%= quiz.author.fullname %> </h2>
-  
-    <h2 class="small text-end">Crée le <%= quiz.created_at.toLocaleDateString() %> </h2>
+  <% const date = quiz.created_at %>
+  <% let options = {
+    weekday: "long",
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  }; %>
+    <h2 class="small text-end">Crée le <%= Intl.DateTimeFormat("fr-FR", options).format(date) %> </h2>
   
     <h3>Thèmes</h3>
     <ul class="mb-4 p-0">

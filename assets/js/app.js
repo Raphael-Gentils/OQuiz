@@ -37,12 +37,12 @@ class Notification {
     }
 }
 
-setTimeout(() => {
-    new Notification('toto est content');
-}, 1000);
-setTimeout(() => {
-    new Notification('toto est content', 'warning');
-}, 2000);
-setTimeout(() => {
-    new Notification('toto est content', 'danger');
-}, 3000);
+//setTimeout(() => {
+//  new Notification('toto est content');
+//}, 1000);
+//setTimeout(() => {
+//   new Notification('toto est content', 'warning');
+//}, 2000);
+//setTimeout(() => {
+//   new Notification('toto est content', 'danger');
+//}, 3000);
